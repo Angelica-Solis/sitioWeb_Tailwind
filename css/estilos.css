@@ -69,73 +69,7 @@ nav ul li a:hover {
     color: black;
 }
 
-.contenedor2 {
-    margin-top: 0;
-    padding: 1.25rem 1.8rem;
-    width: 80%;
-    border-radius: 0.75rem;
-    box-shadow: 0 0.25rem 0.6rem rgba(0, 0, 0, 0.1);
-    max-width: 75rem;
-    display: flex;
-    gap: 2.5rem;
-    align-items: flex-start;
-}
-
-.ladoizquierdo {
-    flex: 0 0 auto;
-    max-width: 60%;
-    padding: 1.25rem;
-    border-radius: 0.6rem;
-    text-align: justify;
-    line-height: 1.5;
-    background-color: lightgray;
-}
-
-.contenedorderecho {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    flex: 0 1 auto; 
-    max-width: 54%; 
-    box-sizing: border-box; 
-}
-
-.ladoderecho {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: right;
-    justify-content: flex-start;
-    padding: 1.25rem;
-    background-color: lightgray;
-    border-radius: 0.6rem;
-}
-
-.contenedorderecho img {
-    gap: 2px;
-    height: 250px;
-    width: 400px;
-}
-
-.ladoderecho2 {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: right;
-    justify-content: flex-start;
-    padding: 1.25rem;
-    background-color: lightgray;
-    border-radius: 0.6rem;
-}
-
-.ladoderecho2 img {
-    gap: 2px;
-    height: 300px;
-    width: 500px;
-}
-
 #layoutexto {
-    margin-left: 5%;
     line-height: 1.5;
     font-size: 120%;
 }
@@ -145,19 +79,26 @@ nav ul li a:hover {
 }
 
 .contenedor3 {
-  width: 90%; 
-  margin: 0; 
-  padding: 20px; 
-  margin-left: 3%;
-  background-color: lightgray; 
+  width: 90%;            
+  margin: 0 auto;         
+  padding: 20px;
+  background-color: lightgray;
   display: flex;
   flex-direction: column;
-  align-items: center; 
+  align-items: center;  
   gap: 20px;
   border-radius: 0.6rem;
+  box-sizing: border-box;
 }
+
+.contenedor3 p {
+  text-align: center;         
+  width: 100%;              
+}
+
 .contenedor3 img {
-  max-width: 70%; 
-  height: 50%;
+  max-width: 80%;         
+  height: auto;
   border-radius: 10px;
+  align-self: center;   
 }
