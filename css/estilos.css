@@ -1,6 +1,7 @@
 body{
     margin: 0;
     padding: 0;
+    background-color: white;
 }
 
 .contenedor{
@@ -11,10 +12,8 @@ body{
 }
 
 .cajaEncabezado{
-    background-image: url("../img/imagenFondo.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color: #0F1c30;
+    margin-bottom: 0;
     padding: 2px 20px;
     flex-direction: column;
     justify-content: center;
@@ -39,7 +38,7 @@ body{
 nav {
     padding: 15px 0;
     border-bottom: 2px rgb(41, 33, 155);
-    background-color: rgb(41, 33, 155);
+    background-color: #304A6E;
 }
 
 nav ul {
@@ -63,5 +62,17 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: darkblue;
+    color: gray;
+}
+
+#layout{
+    text-align: center;
+    color: black;
+}
+
+.contenedor2{
+    align-items: center;
+    background-color: lightgray;
+    width: 50%;
+    border-radius: 20%;
 }
