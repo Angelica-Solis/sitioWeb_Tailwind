@@ -1,17 +1,17 @@
-body{
+body {
     margin: 0;
     padding: 0;
     background-color: white;
 }
 
-.contenedor{
+.contenedor {
     width: 100%;
     height: 100vh;
     background-color: white;
     align-items: flex-start;
 }
 
-.cajaEncabezado{
+.cajaEncabezado {
     background-color: #0F1c30;
     margin-bottom: 0;
     padding: 2px 20px;
@@ -23,7 +23,7 @@ body{
     height: 250px;
 }
 
-#integrantes{
+#integrantes {
     font-size: 17px;
     line-height: 1.5;
 }
@@ -65,14 +65,99 @@ nav ul li a:hover {
     color: gray;
 }
 
-#layout{
-    text-align: center;
+#layout {
     color: black;
 }
 
-.contenedor2{
-    align-items: center;
+.contenedor2 {
+    margin-top: 0;
+    padding: 1.25rem 1.8rem;
+    width: 80%;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.25rem 0.6rem rgba(0, 0, 0, 0.1);
+    max-width: 75rem;
+    display: flex;
+    gap: 2.5rem;
+    align-items: flex-start;
+}
+
+.ladoizquierdo {
+    flex: 0 0 auto;
+    max-width: 60%;
+    padding: 1.25rem;
+    border-radius: 0.6rem;
+    text-align: justify;
+    line-height: 1.5;
     background-color: lightgray;
-    width: 50%;
-    border-radius: 20%;
+}
+
+.contenedorderecho {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    flex: 0 1 auto; 
+    max-width: 54%; 
+    box-sizing: border-box; 
+}
+
+.ladoderecho {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    justify-content: flex-start;
+    padding: 1.25rem;
+    background-color: lightgray;
+    border-radius: 0.6rem;
+}
+
+.contenedorderecho img {
+    gap: 2px;
+    height: 250px;
+    width: 400px;
+}
+
+.ladoderecho2 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    justify-content: flex-start;
+    padding: 1.25rem;
+    background-color: lightgray;
+    border-radius: 0.6rem;
+}
+
+.ladoderecho2 img {
+    gap: 2px;
+    height: 300px;
+    width: 500px;
+}
+
+#layoutexto {
+    margin-left: 5%;
+    line-height: 1.5;
+    font-size: 120%;
+}
+
+#subtitulos {
+    margin-left: 5%;
+}
+
+.contenedor3 {
+  width: 90%; 
+  margin: 0; 
+  padding: 20px; 
+  margin-left: 3%;
+  background-color: lightgray; 
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  gap: 20px;
+  border-radius: 0.6rem;
+}
+.contenedor3 img {
+  max-width: 70%; 
+  height: 50%;
+  border-radius: 10px;
 }
