@@ -67,15 +67,29 @@ nav ul li a:hover {
 
 #layout {
     color: black;
+    text-align: center;
+    margin-bottom: 0;
 }
 
 #layoutexto {
     line-height: 1.5;
     font-size: 120%;
+    text-align: right;
+    margin-top: -88%;
+    margin-left: -5%;
+}
+
+#layoutexto1{
+    line-height: 1.5;
+    font-size: 120%;
+    text-align: left;
+    align-items: left;
+    margin-left: 5%;
 }
 
 #subtitulos {
-    margin-left: 5%;
+    margin-left: 2%;
+    text-align: center;
 }
 
 .contenedor3 {
@@ -84,8 +98,7 @@ nav ul li a:hover {
   padding: 20px;
   background-color: lightgray;
   display: flex;
-  flex-direction: column;
-  align-items: center;  
+  flex-direction: column; 
   gap: 20px;
   border-radius: 0.6rem;
   box-sizing: border-box;
@@ -96,9 +109,21 @@ nav ul li a:hover {
   width: 100%;              
 }
 
+.principales{
+    align-items: left;
+}
+
+.posicionamiento{
+    align-items: right;
+    width: 40%;
+    gap: 2px;
+}
+
 .contenedor3 img {
   max-width: 80%;         
   height: auto;
   border-radius: 10px;
   align-self: center;   
 }
+
+
