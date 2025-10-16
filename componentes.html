@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tailwind - Componentes </title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <!-- Estilos para componentes -->
+    <link rel="stylesheet" href="css/componentes.css">
+</head>
+
+
+    <div class="contenedor">
+        <div class="cajaEncabezado" style="text-align: center; font-size: 24px; color: white;">
+            <h1>Tailwind</h1>
+            <p id="integrantes">
+                <strong>Hecho por:</strong>
+                <br>María Angélica Solís Sibaja
+                <br>Dereck Jimenéz Rodríguez
+                <br>Jose Mario Cubillo Gutierrez
+                <br>Cristel Yuliana Meléndez Jiménez
+            </p>
+        </div>
+        <div class="menu">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Conceptos Básicos</a></li>
+                    <li><a href="personalizacion.html">Personalización</a></li>
+                    <li><a href="layout.html">Layout</a></li>
+                    <li><a href="componentes.html">Componentes</a></li>
+                    <li><a href="demo.html">Demo</a></li>
+                    <li><a href="practica.html">Práctica</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+<!-- ======= ENCABEZADO ======= -->
+<header class="border-b bg-white shadow-sm">
+    <div class="max-w-5xl mx-auto p-4 text-center">
+        <h1 class="text-3xl font-bold">Componentes o elementos de Tailwind</h1>
+        
+    </div>
+</header>
+    <!-- ======= CONTENIDO ======= -->
+    <main class="max-w-5xl mx-auto p-6 space-y-12">
+
+        <!-- ================= 7a. BUTTONS ================= -->
+        <section id="a-buttons" class="space-y-4">
+            <h2 class="text-2xl font-bold border-b pb-1">a) Buttons</h2>
+            <p class="text-sm text-gray-600">
+                ➤ <strong>¿Para qué se usan?</strong> Los botones permiten ejecutar acciones en una página (enviar
+                formularios, abrir menús, confirmar, etc.).
+                En Tailwind se construyen con clases utilitarias para definir colores, bordes y efectos visuales.
+            </p>
+
+            <!-- Ejemplo  -->
+            <div class="flex flex-wrap gap-3 bg-white p-4 border rounded justify-center">
+                <button class="px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700">Primario</button>
+                <button class="px-4 py-2 rounded border hover:bg-gray-100">Secundario</button>
+                <button class="px-4 py-2 rounded bg-green-600 text-white hover:bg-green-700">Éxito</button>
+                <button class="px-4 py-2 rounded bg-red-600 text-white hover:bg-red-700">Peligro</button>
+                <button class="px-4 py-2 rounded bg-gray-300 text-gray-600 cursor-not-allowed">Deshabilitado</button>
+            </div>
+
+            <!-- Código -->
+            <pre class="bg-gray-900 text-gray-100 text-xs rounded p-3 overflow-x-auto"><code>&lt;!-- Clases principales:
+px-4 py-2 → tamaño interno (padding)
+rounded → bordes redondeados
+bg-* y text-* → colores
+hover:bg-* → color al pasar el cursor
+cursor-not-allowed → desactiva interacción --&gt;
+
+&lt;button class="px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700"&gt;Primario&lt;/button&gt;
+&lt;button class="px-4 py-2 rounded border hover:bg-gray-100"&gt;Secundario&lt;/button&gt;
+&lt;button class="px-4 py-2 rounded bg-red-600 text-white hover:bg-red-700"&gt;Peligro&lt;/button&gt;
+</code></pre>
+        </section>
+
+        <!-- ========== 7b. LISTA DE ELEMENTOS (ORGANIZACIÓN) ========== -->
+        <section id="b-lista" class="space-y-4">
+            <h2 class="text-2xl font-bold border-b pb-1">b) Lista de elementos (cómo organizar una lista)</h2>
+            <p class="text-sm text-gray-600">
+                ➤ <strong>¿Para qué se usan?</strong> Las listas sirven para mostrar información ordenada o en grupo
+                (pasos, tareas, menús, etc.).
+                Tailwind permite personalizarlas con <code>divide-y</code> (líneas divisorias), <code>border</code>
+                (bordes) y tipos de lista (<code>list-disc</code> o <code>list-decimal</code>).
+            </p>
+
+            <!-- Ejemplo  -->
+            <ul class="max-w-md bg-white border rounded divide-y mx-auto">
+                <li class="p-3">Tarea 1: Levantar requisitos</li>
+                <li class="p-3">Tarea 2: Diseñar la interfaz</li>
+                <li class="p-3">Tarea 3: Pruebas y entrega</li>
+            </ul>
+
+            <div class="grid gap-6 md:grid-cols-2 max-w-md mx-auto">
+                <ol class="list-decimal pl-6 space-y-1 bg-white p-3 border rounded">
+                    <li>Planificación</li>
+                    <li>Desarrollo</li>
+                    <li>Entrega</li>
+                </ol>
+                <ul class="list-disc pl-6 space-y-1 bg-white p-3 border rounded">
+                    <li>Responsivo</li>
+                    <li>Rápido</li>
+                    <li>Fácil de usar</li>
+                </ul>
+            </div>
+
+            <!-- Código -->
+            <pre class="bg-gray-900 text-gray-100 text-xs rounded p-3 overflow-x-auto"><code>&lt;!-- divide-y: crea líneas entre ítems
+list-disc / list-decimal: viñetas o números
+p-* y pl-* : padding (espaciado interno) --&gt;
+
+&lt;ul class="divide-y divide-gray-200 border rounded"&gt;
+  &lt;li class="p-3"&gt;Elemento 1&lt;/li&gt;
+  &lt;li class="p-3"&gt;Elemento 2&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+        </section>
+
+        <!-- ================= 7c. NAVBAR ================= -->
+        <section id="c-navbar" class="space-y-4">
+            <h2 class="text-2xl font-bold border-b pb-1">c) Navbar</h2>
+            <p class="text-sm text-gray-600">
+                ➤ <strong>¿Para qué se usa?</strong> La barra de navegación (Navbar) permite moverse entre secciones de
+                una página.
+                Con Tailwind se logra fácilmente usando <code>flex</code> para alinear los elementos y
+                <code>details</code> para hacerla responsiva sin JavaScript.
+            </p>
+
+            <!-- Ejemplo  -->
+            <nav class="bg-white border rounded p-3 max-w-2xl mx-auto">
+                <div class="flex items-center justify-between">
+                    <span class="font-bold text-lg">Tailwind</span>
+
+                    <details class="md:hidden">
+                        <summary class="cursor-pointer px-3 py-1 rounded hover:bg-gray-100">Menú</summary>
+                        <div class="mt-2 space-y-1">
+                            <a href="#" class="block px-3 py-1 rounded hover:bg-gray-100">Inicio</a>
+                            <a href="#" class="block px-3 py-1 rounded hover:bg-gray-100">Productos</a>
+                            <a href="#" class="block px-3 py-1 rounded hover:bg-gray-100">Contacto</a>
+                        </div>
+                    </details>
+
+                    <ul class="hidden md:flex gap-4">
+                        <li><a href="#" class="px-2 py-1 rounded hover:bg-gray-100">Inicio</a></li>
+                        <li><a href="#" class="px-2 py-1 rounded hover:bg-gray-100">Productos</a></li>
+                        <li><a href="#" class="px-2 py-1 rounded hover:bg-gray-100">Contacto</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Código -->
+            <pre class="bg-gray-900 text-gray-100 text-xs rounded p-3 overflow-x-auto"><code>&lt;!-- flex: organiza elementos en fila
+justify-between: separa extremos (logo y menú)
+md:hidden / md:flex: visibilidad según tamaño de pantalla --&gt;
+
+&lt;nav class="border rounded p-3"&gt;
+  &lt;div class="flex items-center justify-between"&gt;
+    &lt;span class="font-bold text-lg"&gt;MiMarca&lt;/span&gt;
+    &lt;details class="md:hidden"&gt;
+      &lt;summary&gt;Menú&lt;/summary&gt;
+      &lt;a href="#"&gt;Inicio&lt;/a&gt;
+    &lt;/details&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+</code></pre>
+        </section>
+
+        <!-- ================= 7d. DROPDOWN ================= -->
+        <section id="d-dropdown" class="space-y-4">
+            <h2 class="text-2xl font-bold border-b pb-1">d) Dropdown</h2>
+            <p class="text-sm text-gray-600">
+                ➤ <strong>¿Para qué se usa?</strong> El dropdown (menú desplegable) muestra opciones adicionales al
+                usuario sin ocupar mucho espacio.
+                En Tailwind se logra con <code>&lt;details&gt;</code> + <code>&lt;summary&gt;</code>, usando
+                <code>absolute</code> para que flote y <code>shadow</code> para el efecto visual.
+            </p>
+
+            <!-- Ejemplo  -->
+            <div class="flex justify-center">
+                <details class="relative inline-block">
+                    <summary class="px-4 py-2 rounded border bg-white cursor-pointer hover:bg-gray-100">Opciones
+                    </summary>
+                    <ul class="absolute mt-1 min-w-40 rounded border bg-white p-1 shadow">
+                        <li><a href="#" class="block px-3 py-2 rounded hover:bg-gray-100">Perfil</a></li>
+                        <li><a href="#" class="block px-3 py-2 rounded hover:bg-gray-100">Configuración</a></li>
+                        <li><a href="#" class="block px-3 py-2 rounded hover:bg-gray-100">Salir</a></li>
+                    </ul>
+                </details>
+            </div>
+
+            <!-- Código -->
+            <pre class="bg-gray-900 text-gray-100 text-xs rounded p-3 overflow-x-auto"><code>&lt;!-- relative: permite ubicar elementos flotantes
+absolute: posiciona el menú sobre el contenido
+shadow: agrega sombra al panel desplegable --&gt;
+
+&lt;details class="relative inline-block"&gt;
+  &lt;summary class="px-4 py-2 rounded border bg-white hover:bg-gray-100"&gt;Opciones&lt;/summary&gt;
+  &lt;ul class="absolute mt-1 rounded border bg-white p-1 shadow"&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Perfil&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/details&gt;
+</code></pre>
+        </section>
+
+        <!-- ================= 7e. FORMULARIOS ================= -->
+        <section id="e-formularios" class="space-y-4">
+            <h2 class="text-2xl font-bold border-b pb-1">e) Formularios</h2>
+            <p class="text-sm text-gray-600 text-center">
+                ➤ <strong>¿Para qué se usan?</strong> Los formularios permiten capturar datos del usuario (nombre,
+                correo, selección, etc.).
+                Tailwind usa clases utilitarias para aplicar bordes, colores y efectos de foco de forma rápida y
+                uniforme.
+            </p>
+
+            <!-- FORMULARIO  -->
+            <div class="flex justify-center">
+                <form class="w-full max-w-md space-y-4 bg-white p-6 border rounded shadow-sm" novalidate>
+                    <div>
+                        <label for="nombre" class="block text-sm mb-1">Nombre</label>
+                        <input id="nombre" type="text" placeholder="Tu nombre"
+                            class="w-full border rounded px-3 py-2 focus:outline-none focus:ring focus:ring-blue-300">
+                    </div>
+
+                    <div>
+                        <label for="email" class="block text-sm mb-1">Correo</label>
+                        <input id="email" type="email" placeholder="ejemplo@correo.com"
+                            class="w-full border rounded px-3 py-2 focus:outline-none focus:ring focus:ring-blue-300">
+                    </div>
+
+                    <div class="grid gap-4 md:grid-cols-2">
+                        <div>
+                            <label for="plan" class="block text-sm mb-1">Plan</label>
+                            <select id="plan"
+                                class="w-full border rounded px-3 py-2 focus:outline-none focus:ring focus:ring-blue-300">
+                                <option>Básico</option>
+                                <option>Pro</option>
+                                <option>Enterprise</option>
+                            </select>
+                        </div>
+                        <div class="space-y-2">
+                            <span class="block text-sm font-medium">Preferencias</span>
+                            <label class="flex items-center gap-2 text-sm">
+                                <input type="checkbox"
+                                    class="h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                                Recibir noticias
+                            </label>
+                            <label class="flex items-center gap-2 text-sm">
+                                <input type="radio" name="tipo"
+                                    class="h-4 w-4 border-gray-300 text-blue-600 focus:ring-blue-500">
+                                Mensual
+                            </label>
+                            <label class="flex items-center gap-2 text-sm">
+                                <input type="radio" name="tipo"
+                                    class="h-4 w-4 border-gray-300 text-blue-600 focus:ring-blue-500">
+                                Anual
+                            </label>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="mensaje" class="block text-sm mb-1">Mensaje</label>
+                        <textarea id="mensaje" rows="3" placeholder="¿En qué podemos ayudarte?"
+                            class="w-full border rounded px-3 py-2 focus:outline-none focus:ring focus:ring-blue-300"></textarea>
+                    </div>
+
+                    <div class="flex justify-center gap-3 pt-2">
+                        <button type="submit"
+                            class="px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700">Enviar</button>
+                        <button type="reset" class="px-4 py-2 rounded border hover:bg-gray-100">Limpiar</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Código -->
+            <pre class="bg-gray-900 text-gray-100 text-xs rounded p-3 overflow-x-auto"><code>&lt;!-- border: define el contorno del campo
+rounded: bordes suaves
+focus:ring: resalta el campo activo con color
+grid / md:grid-cols-2: organiza en columnas responsivas --&gt;
+
+&lt;form class="border rounded p-6 max-w-md"&gt;
+  &lt;input type="text" class="border rounded px-3 py-2 focus:ring focus:ring-blue-300"&gt;
+  &lt;select class="border rounded px-3 py-2"&gt;
+    &lt;option&gt;Básico&lt;/option&gt;
+  &lt;/select&gt;
+&lt;/form&gt;
+</code></pre>
+        </section>
+    </main>
+</body>
+
+</html>
