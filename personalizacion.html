@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalización</title>
+    <link rel="stylesheet" href="css/componentes.css">
+    <link rel="stylesheet" href="css/personalizacion.css">
+</head>
+<body>
+    <div class="contenedor">
+        <div class="cajaEncabezado" style="text-align: center; font-size: 24px; color: white;">
+            <h1>Tailwind</h1>
+            <p id="integrantes">
+                <strong>Hecho por:</strong>
+                <br>María Angélica Solís Sibaja
+                <br>Dereck Jimenéz Rodríguez
+                <br>Jose Mario Cubillo Gutierrez
+                <br>Cristel Yuliana Meléndez Jiménez
+                <br>Erin Stella Huang Lin 
+            </p>
+        </div>
+        <div class="menu">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Conceptos Básicos</a></li>
+                    <li><a href="personalizacion.html">Personalización</a></li>
+                    <li><a href="layout.html">Layout</a></li>
+                    <li><a href="componentes.html">Componentes</a></li>
+                    <li><a href="demo.html">Demo</a></li>
+                    <li><a href="practica.html">Práctica</a></li>
+                </ul>
+            </nav>
+        </div>
+
+          <div class="contenido">
+            <h1>Configuración e Instalación de Tailwind CSS</h1>
+            <p>
+                Tailwind CSS puede instalarse de diferentes maneras según el tipo de proyecto.
+                Las opciones más comunes incluyen el uso de Vite, PostCSS, la CLI o la carga
+                directa con Play CDN.
+            </p>
+
+            <div class="caja-ejemplo">
+                <h3>✅ Usando Vite</h3>
+                <p>Es ideal para proyectos modernos con React, Vue o Svelte. Permite <em>hot reload</em> rápido.</p>
+                <pre><code>npm create vite@latest mi-app -- --template react
+cd mi-app
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p</code></pre>
+            </div>
+
+            <div class="caja-ejemplo">
+                <h3>✅ Usando PostCSS</h3>
+                <p>Es la opción recomendada para producción, ya que permite eliminar clases no usadas y agregar plugins.</p>
+                <pre><code>npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p</code></pre>
+            </div>
+
+            <div class="caja-ejemplo">
+                <h3>✅ Usando la CLI</h3>
+                <p>Ideal para proyectos pequeños o educativos. No requiere configuración extra.</p>
+                <pre><code>npx tailwindcss -i ./input.css -o ./output.css --watch</code></pre>
+            </div>
+
+            <div class="caja-ejemplo">
+                <h3>✅ Usando Play CDN</h3>
+                <p>Permite probar Tailwind rápidamente sin instalación:</p>
+                <pre><code>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</code></pre>
+            </div>
+
+            <hr>
+            <h1>Personalización del Tema y Paleta de Colores</h1>
+            <p>
+                Tailwind permite personalizar su tema para adaptarse a la identidad visual de cada proyecto.
+                Puedes modificar colores, tipografía, tamaños y espaciados dentro del archivo 
+                <code>tailwind.config.js</code>.
+            </p>
+
+            <div class="caja-ejemplo">
+                <h3>🎨 Extender Colores Predeterminados</h3>
+                <pre><code>module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        brand: '#38bdf8',
+        dark: '#0c86c9',
+      },
+    },
+  },
+}</code></pre>
+            </div>
+
+            <div class="caja-ejemplo">
+                <h3>🎨 Sobrescribir Paleta Completa</h3>
+                <pre><code>module.exports = {
+  theme: {
+    colors: {
+      white: '#fff',
+      black: '#000',
+      primary: '#38bdf8',
+    },
+  },
+}</code></pre>
+            </div>
+
+            <div class="caja-ejemplo">
+                <h3>🌗 Variables CSS para Modo Oscuro</h3>
+                <pre><code>:root {
+  --color-primario: #38bdf8;
+}
+.dark {
+  --color-primario: #0ea5e9;
+}</code></pre>
+            </div>
+
+           
+
+            <p style="text-align:center;"><strong>Tailwind CSS</strong> es flexible, potente y personalizable para cualquier tipo de proyecto.</p>
+        </div>
+    </div>
+</body>
+</html>
