@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
+    <title>Inicio - Tailwind CSS</title>
     <link rel="stylesheet" href="css/estilos.css">
+    
 </head>
 <body>
     <div class="contenedor">
@@ -19,7 +19,7 @@
                 <br>Erin Stella Huang Lin
             </p>
         </div>
-         <div class="menu">
+        <div class="menu">
             <nav>
                 <ul>
                     <li><a href="index.html">Conceptos Básicos</a></li>
@@ -30,6 +30,108 @@
                     <li><a href="practica.html">Práctica</a></li>
                 </ul>
             </nav>
+        </div>
+        
+        <div class="contenido-index">
+            <section class="seccion">
+                <h1 class="titulo-principal">Conceptos Básicos de Tailwind CSS</h1>
+                
+                <h2 class="subtitulo">¿Qué es Tailwind?</h2>
+                <p class="parrafo">
+                    Tailwind es un <strong>framework CSS</strong> el cual prioriza las utilidades sobre el estilo. Este se diferencia de otros frameworks CSS como Bootstrap o Bulma ya que no provee componentes prediseñados. En lugar de esto, Tailwind proporciona un conjunto de <strong>clases utilitarias (Utility Classes)</strong> las cuales ayudan para la estructura y el estilo.
+                </p>
+                <p class="parrafo">
+                    Dichas clases facilitan la creación rápida de diseños personalizados con facilidad. Estas clases le permiten al usuario una <strong>personalización a fondo y al gusto del desarrollador</strong>, no del framework como sucede en Bootstrap y otros similares.
+                </p>
+            </section>
+            
+            <section class="seccion">
+                <h2 class="subtitulo">Comparación con Otros Frameworks</h2>
+                <p class="parrafo"> 
+                    Muchos desarrolladores llegan a comparar diferentes frameworks. Sin embargo, cabe aclarar que cada uno tiene su propia función y se usan dependiendo de lo que se esté buscando. Dichas comparaciones se dan usualmente entre los frameworks más usados, dos de estos son <strong>Bootstrap</strong> y <strong>Tailwind</strong>.
+                </p>
+                
+                <p class="parrafo" style="text-align: center; font-weight: bold; color: darkblue; margin: 25px 0;">
+                    Para entender el porqué de esta comparación, analicemos cómo se ve un mismo botón usando Bootstrap vs Tailwind:
+                </p>
+                
+                <div class="comparacion-box">
+                    <div class="framework-card">
+                        <h4>Bootstrap</h4>
+                        <div class="codigo">&lt;button class="btn btn-primary"&gt;Botón&lt;/button&gt;</div>
+                        <p class="nota-comparacion">
+                            <strong>Menos código</strong>, pero diseño predeterminado que no se puede modificar fácilmente.
+                        </p>
+                    </div>
+                    
+                    <div class="framework-card">
+                        <h4>Tailwind</h4>
+                        <div class="codigo">&lt;button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"&gt;Botón&lt;/button&gt;</div>
+                        <p class="nota-comparacion">
+                            <strong>Más clases</strong>, pero control total sobre el diseño y estilo del botón.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="analisis-box">
+                    <p style="font-weight: bold; color: black; font-size: 1.1em;">📊 Análisis de la comparación:</p>
+                    <p>
+                        Como se aprecia, al usar <strong>Bootstrap</strong> se escribe menos que usando <strong>Tailwind</strong>. Sin embargo, esto se debe a que Bootstrap viene con un diseño predeterminado el cual no se puede modificar, obligando así al desarrollador a usar este diseño.
+                    </p>
+                    <p>
+                        <strong>Tailwind</strong>, por otra parte, nos brinda las clases utilitarias para crear nuestros propios estilos y diseños sin tener que escribir CSS desde cero. Bootstrap es ideal si lo que se busca es tener una página lista con mayor rapidez con componentes diseñados y listos para usar.
+                    </p>
+                    <p>
+                        Sin embargo, no todo es beneficioso ya que al usar Bootstrap el CSS puede llegar a ser <strong>más pesado</strong> debido a que trae diversas funciones o componentes que no se lleguen a usar pero que de igual forma permanecen.
+                    </p>
+                    <p>
+                        Tailwind, por otra parte, no trae ningún diseño predeterminado permitiéndole al desarrollador una <strong>personalización total</strong>. Se tienen que usar más clases en comparación con Bootstrap, pero esto mismo brinda una mayor flexibilidad y garantiza que tu web no se vea igual a otras. Usando Bootstrap, la mayoría de webs son muy parecidas si no se llegan a personalizar.
+                    </p>
+                    <p style="font-weight: bold; color: #10b981;">
+                        ✓ Además, Tailwind es más optimizado ya que solo incluye en el CSS final lo que se llegue a usar, volviéndolo mucho más ligero que Bootstrap.
+                    </p>
+                </div>
+            </section>
+            
+            <section class="seccion">
+                <h2 class="subtitulo">¿Por qué usar Tailwind?</h2>
+                
+                <div class="caja-destaque">
+                    <h3>🚀 Razones para elegir Tailwind CSS</h3>
+                    <ul class="razones-lista">
+                        <li><strong>Clases Utilitarias:</strong> Brindan una mayor flexibilidad al usuario permitiéndole hacer diseños y estilos propios, creando webs únicas si sabes diseñar bien.</li>
+                        <li><strong>CSS Optimizado:</strong> Solo se incluirá en el archivo final lo que llegues a usar, resultando en un CSS más ligero y rápido.</li>
+                        <li><strong>Reutilización:</strong> Puedes reutilizar las mismas clases incluyéndolas en un componente de JavaScript o en una sola clase CSS para no repetirlas.</li>
+                        <li><strong>Personalización Total:</strong> No estás limitado por diseños predeterminados, tienes el control completo de la apariencia de tu sitio.</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section class="seccion">
+                <h2 class="subtitulo">Ventajas y Desventajas</h2>
+                
+                <div class="ventajas-desventajas-grid">
+                    <div class="columna-ventajas">
+                        <h3>✓ Ventajas</h3>
+                        <ul class="lista-ventajas">
+                            <li>Mayor optimización del CSS final</li>
+                            <li>Mayor flexibilidad en el diseño</li>
+                            <li>Personalización completa</li>
+                            <li>Reutilización de clases</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="columna-desventajas">
+                        <h3>✗ Desventajas</h3>
+                        <ul class="lista-desventajas">
+                            <li>Ausencia de componentes predeterminados</li>
+                            <li>Complejidad inicial para nuevos usuarios</li>
+                            <li>HTML más extenso y repetitivo</li>
+                            <li>Menor legibilidad del HTML</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
         </div>
     </div>
 </body>
