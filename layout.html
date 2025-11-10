@@ -138,9 +138,143 @@
                 <img src="img/codigoespaciado.png" alt="Ejemplo de codigo espaciado" class="max-w-[80%]">
                 <p style="text-align: center;">Resultado:</p>
                 <img src="img/resultadoespaciado.png" alt="Ejemplo resultado espaciado" class="max-w-[80%]">
+            <h3 style="text-align: center;">Tema Oscuro</h3>
+
+
+                <p>El tema oscuro es un tipo de diseño que permite invertir los colores de un sitio web de
+                    blanco a negro y viceversa, utilzando fondos oscuros con textos claros, en vez del típico
+                    fondo claro con el texto oscuro, siendo una caracteristica muy utilizada en muchos
+                    sistemas operativos.</p>
+                <p>Tailwind Css facilita está opción al incluir una variante "dark", que nos permite diseñar 
+                    sitios web de manera diferente al habilitar el modo oscuro</p>
+                <br>
+                <br>
+                <img src="img/ModoOscuroEjemplos.png" alt="Ejemplo Modo Oscuro">
+                <img src="img/codigoEjemploDarkModepng.png" alt="Codigo Ejemplo">
+                <br>
+                <br>
+                <p>De forma predeterminada, se utiliza la función "prefers-color-scheme", sirve para colocar
+                    de forma automática el modo claro o oscuro, según las preferencias del usuario en el equipo, o según
+                    la configuración del sistema operativo o navegador, sin embargo, también nos dan la opción de crear
+                    sitios web que permitan alternar de manera manual el modo oscuro o claro. Para esto, se debe
+                    anular la variante "dark" para poder utilizar su selector personalizado
+                </p>
+                <img src="img/CodigoCSSTemaOscuro.png" alt="Codigo CSS">
+                <br>
+                <p>Ahora, en lugar de que las utilidades "dark:" se apliquen automáticamente según la 
+                    preferencia del sistema operativo (mediante el "prefers-color-scheme"), 
+                    se aplicarán cada vez que la clase dark esté presente en el árbol del documento HTML.
+                    Esto significa que podemos activar el modo oscuro manualmente, añadiendo la clase “dark” al elemento
+                    html o a un contenedor principal.</p>
+                    <img src="img/codigoEjemplo2HTML.png" alt="Codigo HTML 2">
+                    <br>
+                    <p>
+                        Depende de nosotros la forma de agregar al elemento "html" la clase "dark", siendo un 
+                        enfoque muy común usar un poco de JavaScript, para actualizar el atributo "class" y 
+                        sincroniza esa preferencia en zonas como "localStorage"
+                    </p>
+                    <br>
+                    <br>
+                    <h3 style="text-align: center;">Uso de un atributo de datos</h3>
+                    <p>
+                        Si no quieres usar una clase para activar el modo oscuro, puedes usar como una 
+                        alternativa un atributo de datos, para esto, simplemente se deberá anular la 
+                        variante “Dark” con el uso de un selector de atributos
+                    </p>
+                    <img src="img/atributoDatosCodigoHTML.png" alt="Codigo Atributo de Datos HTML">
+                    <br>
+                    <p>
+                        Gracias a esta función, las utilidades del modo oscuro siempre se aplicarán si 
+                        el atributo “data-theme” se configure en “dark”, en algún lugar del árbol
+                    </p>
+                    <img src="img/atributoDatosCodigoHTML2.png" alt="Codigo 2 Atributo de Datos HTML">
+                    <h3 style="text-align: center;"> Soporte para temas del sistema</h3>
+                    <p>Para poder crear conmutadores de rema de tres vías que permitan el modo claro, 
+                    modo oscuro  y el tema del sistema, se deberá de hacer uso del selector del modo oscuro 
+                    customizado y la función API “window.matchMedia()” , para poder detectar el tema que 
+                    posee el sistema y actualizar el elemento “html” cuando se requiera. La siguiente imagen
+                    muestra un código de ejemplo muy sencillo de como se admite el modo claro y el modo 
+                    oscuro, además de respetar las preferencias del sistema operativo
+                    </p>
+                    <img src="img/SoporteTemasSistemaCodigo.png" alt="Soporte para temas del sistema">
+
+                    <!-- Boton para el tema oscuro -->
+                <div class="boton-contenedor">
+                <button id="toggleTheme" class="botonOscuro">Cambiar tema</button>
+                </div>
+
+                <br>
+                <br>
+                <h3 style="text-align: center;">Contenedores</h3>
+                <p>Los contenedores son componentes que sirven para poder ajustar la anchura de un 
+                    elemento según el breakpoint actual. <br>
+                    Entre los usos básicos que se les puede dar a los contenedores, la clase “container” 
+                    permite establecer el valor “max-width” de un elemento para hacer que este coincida 
+                    con el valor “min-width” del breakpoint actual, permitiéndonos diseñar conjuntos 
+                    fijos de tamaños de pantallas, en vez de intentar adaptar una ventana completamente 
+                    fluida. Algo a tener en cuenta, es que los contenedores usados en Tailwind no se centran 
+                    de forma automática, y no poseen ningún tipo de relleno horizontal incorporado. Para 
+                    poder centrar un contenedor, se debe utilizar la utilidad “mx-auto”, y para agregar el
+                    relleno horizontal de forma manual, se utiliza la utilidad “px-*”.</p>
+                    <img src="img/ComponenteContenedor.png" alt="Componente Contenedor">
+                    <br>
+                    <p>Codigo para Centrar Contenedor:</p>
+                    <img src="img/CentrarContenedor.png" alt="Codigo para Centrar Contenedor">
+                    <p>Codigo para rellenar horizontalmente un contenedor:</p>
+                    <img src="img/RellenohorizontalContenedor.png" alt="Codigo Relleno Horizontal del Contenedor">
+                    <br>
+                    <p>Para poder centrar los contenedores de una forma predeterminada, se debe 
+                        configurar, o activar la opción “center” a un estado “true” en la sección 
+                        “theme.container” en los archivos de configuración</p>
+                    <img src="img/CentradoPorDefecto.png" alt="Centrar por defecto">
+                    <br>
+                    <p>
+                        Por otro lado, también podemos añadir relleno horizontal de forma predeterminada, 
+                        especificando la cantidad de relleno que desea utilizar, mediante la opción “padding”, 
+                        en la sección “theme.container” de los archivos de configuración.
+                    </p>
+                    <img src="img/RellenoPredeterminado.png" alt="Relleno Horizontal predeterminado">
+                    <br>
+                    <p>Y si se busca especificar una cantidad de relleno diferente para cada breakpoint, 
+                        se debe de usar un objeto para otorgar un valor “default” y cualquier override 
+                        específico del breakpoint
+                    </p>
+                    <br>
+                    <img src="img/RellenoEspecifico.png" alt="Relleno especificado">
+                    <br>
+                    <p>
+                        Por último, la clase “container” también posee variantes responsivas, como 
+                        “md:container”, siendo esta la variante por defecto, la cual permite que algo 
+                        se comporte como si fuera un contenedor en un solo breakpoint determinado y superior
+                    </p>
+                    <br>
+                    <img src="img/VarianteResponsiva.png" alt="Variante contenedor Responsivo">
             </div>
-        </div>
     </div>
+
+    <script>
+    const toggleBtn = document.getElementById('toggleTheme');
+    const html = document.documentElement;
+
+    if (localStorage.theme === 'dark') {
+    html.classList.add('dark');
+    } else if (localStorage.theme === 'light') {
+    html.classList.remove('dark');
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    html.classList.add('dark');
+    }
+
+//   Alternar entre los modos
+    toggleBtn.addEventListener('click', () => {
+        html.classList.toggle('dark');
+        if (html.classList.contains('dark')) {
+            localStorage.theme = 'dark';
+        } else {
+            localStorage.theme = 'light';
+        }
+        });
+    </script>
+
 </body>
 
 </html>
