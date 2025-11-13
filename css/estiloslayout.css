@@ -1,14 +1,17 @@
+@import "Tailwind.css";
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+
 body {
-    margin: 0;
-    padding: 0;
-    background-color: white;
     font-family: 'Georgia', 'Times New Roman', serif;
+    background-color: var(--background);
+    color: var(--foreground);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .contenedor {
@@ -246,89 +249,180 @@ pre {
     margin-bottom: 0.5rem; 
 }
 
-/* Modo oscuro custom */
-.dark body {
-    background-color: #0F1c30;
-    color: white;
+/*Configuraciones Modo oscuro*/
+:root {
+  --background: #ffffff;
+  --foreground: #1b1b1b;
+
+  --card: #ffffff;
+  --card-foreground: #1f2937;
+
+  --primary: #0F1c30;
+  --primary-foreground: #ffffff;
+
+  --secondary: #304A6E;
+  --secondary-foreground: #ffffff;
+
+  --border: #e2e8f0;
+  --muted: #64748b;
+  --muted-foreground: #333333;
+
+  --accent: #f8fafc;
+  --accent-foreground: #1e293b;
 }
 
-.dark .contenedor3 {
-    background-color: #1E293B;
-    color: white;
+.dark {
+  --background: #12141f;                  /* Fondo principal */
+  --foreground: #f9fafb;                  /* Texto general */
+
+  --card: #1e2130;                        /* Fondo de secciones */
+  --card-foreground: #f3f4f6;
+
+  --popover: #1f2335;
+  --popover-foreground: #f8fafc;
+
+  --primary: #818cf8;                     /* Azul-violeta brillante */
+  --primary-foreground: #ffffff;
+
+  --secondary: #475569;                   /* Gris azulado */
+  --secondary-foreground: #e2e8f0;
+
+  --muted: #2d3145;
+  --muted-foreground: #d1d5db;
+
+  --accent: #6366f1;                      /* Violeta más saturado */
+  --accent-foreground: #ffffff;
+
+  --destructive: #ef4444;
+  --border: #4b5563;
+  --input: #4b5563;
+  --ring: #6366f1;
+
+  --chart-1: #818cf8;
+  --chart-2: #10b981;
+  --chart-3: #c084fc;
+  --chart-4: #facc15;
+  --chart-5: #3b82f6;
+
+  --sidebar: #181a25;
+  --sidebar-foreground: #f9fafb;
+  --sidebar-primary: #6366f1;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #2d3145;
+  --sidebar-accent-foreground: #f8fafc;
+  --sidebar-border: rgba(255, 255, 255, 0.1);
+  --sidebar-ring: #6366f1;
 }
 
-.dark .cajaEncabezado {
-    background-color: #1E293B;
-    color: white;
-    border-top-color: #334155;
-    border-bottom-color: #334155;
-
-}
-
-.dark .contenedor {
-    background-color: #0F172A;
-    color: white;
-}
-
-.dark h1, .dark h2, .dark h3 {
-    color: #E2E8F0;
-}
-
-.dark p {
-    color: #F1F5F9;
-}
-
-.dark img {
-    background-color: #1E293B;
-    border: 1px solid #334155;
-    border-radius: 6px;
-}
-
-.dark #layout {
-    color: #E2E8F0 !important;
-}
-
-.dark nav {
-    background-color: #1E40AF;
-}
-
-.dark nav ul li a {
-    color: #CBD5E1;
-}
-
-.dark nav ul li a:hover {
-    color: #38BDF8;
-}
-
-.boton-contenedor {
-    display: flex;
-    justify-content: center;
-    margin: 30px 0;
-}
-
+/* --- Botón de cambio de tema --- */
 .botonOscuro {
     background-color: #304A6E;
-    color: white;
-    border: none;
+    color: var(--primary-foreground);
     padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 6px;
+    border: none;
+    border-radius: 8px;
     cursor: pointer;
+    font-size: 1rem;
     transition: background-color 0.3s;
 }
 
-/* color del boton en modo oscuro */
-.dark .botonOscuro {
-    background-color: #4268e7;
-    color: #E2E8F0;
+.botonOscuro:hover {
+    background-color: #3b5998;
+    color: #ffffff;
 }
 
+/* --- Ejemplo de cambio de tema --- */
+.ejemplo-tema {
+    background-color: var(--card);
+    border: 2px solid var(--accent);
+    color: var(--foreground);
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+/* Ajustes para el modo oscuro === */
+/* === Corrección visual modo oscuro === */
+.dark body {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+/* Contenedor principal */
+.dark .contenedor3 {
+  background-color: var(--card);
+  color: var(--card-foreground);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Encabezado */
+.dark .cajaEncabezado {
+  background-color: #181b2f;
+  border-top: 2px solid #6366f1;
+  border-bottom: 2px solid #818cf8;
+  color: #f9fafb;
+}
+
+/* Menú */
+.dark .menu nav {
+  background-color: #1f2335;
+  border-bottom: 2px solid #4f46e5;
+}
+
+.dark .menu nav ul li a {
+  color: #e5e7eb;
+}
+
+.dark .menu nav ul li a:hover {
+  color: #a5b4fc;
+}
+
+/* Títulos */
+.dark #layout {
+  color: #a5b4fc;
+}
+
+.dark #subtitulos,
+.dark .contenedor3 h2 {
+  color: #c7d2fe;
+}
+
+.dark .contenedor3 h3 {
+  color: #93c5fd;
+}
+
+/* Texto general */
 .dark #layoutexto1,
 .dark #layoutexto,
 .dark .contenedor3 p {
-    color: #F1F5F9;
+  color: #e5e7eb;
 }
 
+/* Negritas */
 .dark .contenedor3 p strong {
-    color: #E2E8F0;
+  color: #a5b4fc;
+}
+
+/* Bloques y cajas */
+.dark .grid > div {
+  background-color: #25293c;
+  border-left: 4px solid #6366f1;
+  color: #f3f4f6;
+}
+
+/* Imágenes */
+.dark .contenedor3 img {
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+/* Botón */
+.dark .botonOscuro {
+  background-color: #6366f1;
+  color: white;
+}
+
+.dark .botonOscuro:hover {
+  background-color: #818cf8;
 }

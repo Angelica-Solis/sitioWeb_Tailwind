@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Layout</title>
     <link rel="stylesheet" href="css/estiloslayout.css">
+
 </head>
 
-<body>
+<body class="bg-[var(--background)] text-[var(--foreground)] transition-colors duration-500">
     <div class="contenedor">
         <div class="cajaEncabezado" style="text-align: center; font-size: 24px; color: white;">
             <h1>Tailwind</h1>
@@ -199,9 +200,9 @@
                     <img src="img/SoporteTemasSistemaCodigo.png" alt="Soporte para temas del sistema">
 
                     <!-- Boton para el tema oscuro -->
-                <div class="boton-contenedor">
-                <button id="toggleTheme" class="botonOscuro">Cambiar tema</button>
-                </div>
+                    <div class="boton-contenedor">
+                    <button id="toggleTheme" class="botonOscuro">Cambiar tema</button>
+                    </div>
 
                 <br>
                 <br>
@@ -253,27 +254,26 @@
     </div>
 
     <script>
-    const toggleBtn = document.getElementById('toggleTheme');
-    const html = document.documentElement;
+        const btn = document.getElementById('toggleTheme');
+        const html = document.documentElement;
 
-    if (localStorage.theme === 'dark') {
-    html.classList.add('dark');
-    } else if (localStorage.theme === 'light') {
-    html.classList.remove('dark');
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    html.classList.add('dark');
-    }
-
-//   Alternar entre los modos
-    toggleBtn.addEventListener('click', () => {
-        html.classList.toggle('dark');
-        if (html.classList.contains('dark')) {
-            localStorage.theme = 'dark';
-        } else {
-            localStorage.theme = 'light';
+        // Si ya hay una preferencia guardada, se aplica
+        if (localStorage.getItem('theme') === 'dark') {
+            html.classList.add('dark');
         }
+
+        btn.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            // Guardam la preferencia del usuario
+            if (html.classList.contains('dark')) {
+            localStorage.setItem('theme', 'dark');
+            } else {
+            localStorage.setItem('theme', 'light');
+            }
         });
     </script>
+
+
 
 </body>
 
